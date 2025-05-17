@@ -1,0 +1,13 @@
+<div class="layoutHorizontal" id="verificationInputContainer">
+    <div class="inputContainer">
+        <textarea id="jwtInput" type="text" required placeholder="Saisissez vote code JWT ici..."></textarea><label class="onTop" for="">Saisissez vote code JWT ici...</label>
+    </div>
+    <button type="button" onclick="currentModule.verifyCredential()">Vérifier</button>
+</div>
+<div class="container layoutHorizontal hidden" id="verificationStatus">
+        <img id="validationIllustration" src="images/valid.svg"/>
+        <div class="separationVertical"></div>
+        <div class="layoutVertical" id="verificationInformation">
+            
+        </div>
+</div>

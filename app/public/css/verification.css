@@ -1,0 +1,64 @@
+#verificationInputContainer
+{
+    width:100%;
+    align-items: end;
+}
+#verificationInputContainer .inputContainer
+{
+    width:90%;
+    padding-bottom: 0px;
+}
+.inputContainer textarea ~label
+{
+    font-size: 1em !important;
+    opacity: 0;
+    top:-5px !important;
+    transition: 0.5s;
+}
+#verificationInputContainer textarea
+{
+    width:100% !important;
+    min-height:150px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+}
+
+#verificationInputContainer textarea:valid ~label
+{
+    opacity: 1;
+}
+
+
+#verificationStatus
+{
+    margin: 10px;
+    margin-top: 20px;
+    min-height: 300px;
+    height:300px;
+    opacity: 1;
+    transition:0.5s;
+    align-items: center;
+    justify-items: center;
+}
+#verificationStatus.hidden
+{
+    opacity: 0;
+}
+
+#verificationInformation
+{
+    height:100%;
+    flex-wrap: wrap;
+    overflow: auto;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+}
+#verificationInformation > div, #verificationInformation > fieldset
+{
+    padding:10px;
+    margin:5px;
+}
+.invalid
+{
+    color:red;
+}

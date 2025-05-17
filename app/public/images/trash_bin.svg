@@ -1,0 +1,9 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="trash_bin">
+<circle id="iconBorder" cx="50" cy="50" r="40" stroke="white" stroke-width="10"/>
+<g id="bin">
+<path id="bin_body" d="M42.5 39V70M51 70V39M59 70V39M65 76H36L35 34.5H66L65 76Z" stroke="white" stroke-width="5"/>
+<path id="bin_lid" d="M44.5 27.5H31V35H70V27.5H58M44.5 27.5V26H58V27.5M44.5 27.5H58" stroke="white" stroke-width="5"/>
+</g>
+</g>
+</svg>

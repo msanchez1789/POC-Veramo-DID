@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <title>DID Manager</title>
+    <link rel="stylesheet" href="css/general.css" type="text/css">
+    <link rel="stylesheet" href="css/modal.css" type="text/css">
+    <link rel="stylesheet" href="css/tab.css" type="text/css">
+    <link rel="stylesheet" href="css/dashboard.css" type="text/css">
+    <link rel="stylesheet" href="css/table.css" type="text/css">
+    <link rel="stylesheet" href="css/credential.css" type="text/css">
+    <link rel="stylesheet" href="css/verification.css" type="text/css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#222">
+</head>
+<body class="layoutVertical">
+    <header class="layoutHorizontal">
+        <div id="logoContainer" class="layoutHorizontal">
+            <svg id="logo" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.1294 1.05061C10.8535 0.716533 4.69713 3.66457 2.00017 5C1.14758 11.5902 3.07539 25.8531 16 31C23.7298 25.5408 31.9928 22.704 30.5704 4.5386C26.7468 2.60722 19.6282 0.659113 16.444 1.05061V4.27392C18.9844 4.43052 24.621 5.08562 26.8447 6.45324C27.8365 10.7075 26.7009 20.6212 16 27C10.9628 26.5302 3.38112 14.8834 5.93889 7.11879C6.75233 6.35319 9.24572 4.85333 12.7118 4.97861V8.63257L9.5798 9.20676C8.76636 11.6862 8.55637 18.0306 16 23C18.7535 21.1295 24.454 15.7317 23.4518 9.67656C22.6731 8.92314 19.7375 7.4446 16 8V11" stroke="black" stroke-width="2"/>
+                <path d="M16.1797 11C17.6632 11 18.8603 12.1974 18.8604 13.667C18.8604 15.1366 17.6632 16.334 16.1797 16.334C14.6964 16.3338 13.5 15.1365 13.5 13.667C13.5 12.1975 14.6964 11.0002 16.1797 11Z" stroke="black" stroke-width="2"/>
+            </svg>
+            <svg id="logoText" viewBox="0 0 130 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <text x="0" y="20">Micka.h.Inc</text>
+            </svg>
+        </div>
+    </header>
+    <div id="app" class="layoutHorizontal">
+        <nav class="layoutVertical">
+            <button data-fetch="dashboard" type="button">Dashboard</button>
+            <button data-fetch="did" type="button">Organization Profile</button>
+            <button data-fetch="credential" type="button">Credentials</button>
+            <button data-fetch="verification" type="button">Verification</button>
+        </nav>
+        <main id="mainContent"></main>
+    </div>
+    <script src="script/main.js"></script>
+    <script src="script/modal.js"></script>
+</body>
+</html>

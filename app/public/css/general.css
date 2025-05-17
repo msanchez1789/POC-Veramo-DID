@@ -1,0 +1,301 @@
+:root
+{
+    --background-primary:#181A1B;
+    --background-secondary:#1B1D1E;
+    --background-tertiary:#1E2022;
+    --accent-color: #004fc6;
+    --secondary-color: #0014c6;
+    --hover-color:rgba(0, 79, 198,0.5);
+    --highlight-color:#7cc8fc;
+    --warning-color:#BB460A;
+    --text-color:whitesmoke;
+    --nav-size:220px;
+    --min-nav-size:70px;
+    --main-size:calc(100vw - var(--nav-size));
+    --border-color:rgba(170,170,170,0.3);
+}
+*
+{
+    box-sizing: border-box;
+    outline:none;
+}
+body
+{
+    background-color: var(--background-primary);
+    color:var(--text-color);
+    padding:0px;
+    margin:0px;
+    height:100vh;
+    width:100vw;
+}
+
+.layoutHorizontal
+{
+    display:flex;
+    flex-direction: row;
+}
+.layoutVertical
+{
+    display:flex;
+    flex-direction: column;
+}
+
+.separationVertical
+{
+    background:linear-gradient(to bottom, transparent, var(--border-color),transparent);
+    width:2px;
+    height:100%;
+    opacity:1;
+    margin:0px 2px;
+    transition:0.5s
+}
+.separationHorizontal
+{
+    background:linear-gradient(to right, transparent, var(--border-color),transparent);
+    width:100%;
+    height:2px;
+    opacity:1;
+    margin:0px 2px;
+    transition:0.5s
+}
+
+/* GENERAL CUSTOMISATION */
+/* BUTTONS */
+input, select, option
+{
+    cursor: pointer;
+}
+button.cancelButton
+{
+    background-image:linear-gradient(to right,red,maroon,red);
+}
+button, select
+{
+    background-image:linear-gradient(to right,var(--accent-color),var(--secondary-color),var(--accent-color));
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+    padding:10px;
+    color:var(--text-color);
+    border-radius: 20px;
+    border:none;
+    margin:5px;
+    cursor: pointer;
+    min-width: 100px;
+    font-size: 1.1em;
+    font-weight: bold;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+    transition: 0.5s;
+}
+button:hover, select:hover
+{
+    background-position: 100% 0%;
+}
+select:hover
+{
+    border-radius: 0px;
+}
+/* END BUTTONS */
+/* INPUT */
+.inputContainer
+{
+    position:relative;
+    padding:10px;
+}
+.inputContainer label
+{
+    position:absolute;
+    top:20px;
+    left:15px;
+    font-size: 1em;
+    transition: 0.5s;
+}
+.inputContainer input:hover ~ label, .inputContainer input:valid ~ label, .inputContainer input:focus ~ label, .inputContainer label.onTop
+{
+    top:-3px;
+    left:10px;
+    font-size: 0.8em;
+}
+.inputContainer input, .inputContainer textarea
+{
+    background-color: var(--background-tertiary);
+    color:var(--text-color);
+    border-radius: 25px;
+    padding:10px;
+    border:0.5px solid var(--border-color);
+    transition: 0.5s;
+}
+.inputContainer textarea
+{
+    transition: 0.5s 0s width height
+}
+.inputContainer input:hover,.inputContainer input:focus, .inputContainer textarea:hover, .inputContainer textarea:focus
+{
+    border:0.5px solid var(--accent-color);
+    border-radius: 0px;
+}
+.inputContainer input[required]:valid, .inputContainer textarea[required]:valid
+{
+    border:1px solid green;
+}
+.inputContainer input[required]:focus:invalid, .inputContainer textarea[required]:focus:invalid
+{
+    border:1px solid red;
+}
+/* END INPUTS */
+/* Select */
+.inputContainer select ~ label
+{
+    top:0px;
+    left:25px;
+}
+.inputContainer select:hover ~ label
+{
+    top:0px;
+    left:15px;
+}
+option
+{
+    background-color: whitesmoke;
+    color:black;
+    font-weight: bold;
+}
+/* END select */
+
+header
+{
+    width:100vw;
+    height:40px;
+    background-color: var(--accent-color);
+}
+#logoContainer
+{
+    background-color: whitesmoke;
+    width:var(--nav-size);
+    min-width: var(--min-nav-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logoContainer svg#logo
+{
+    width:33%;
+    height:80%;
+}
+#logoContainer #logoText
+{
+    fill:black;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-anchor: center;
+}
+
+#app
+{
+    height:calc(100vh - 40px);
+    background-color: var(--warning-color);
+}
+main
+{
+    background-color: var(--background-primary);
+    flex-grow: 1;
+    padding:5px 5px 5px 15px;
+    max-width: calc(100vw - var(--min-nav-size));
+    width: 100%;
+    min-width:cal(100vw - var(--nav-size));
+}
+nav
+{
+    z-index: 0;
+    flex-shrink: 0;
+    width:var(--nav-size);
+    min-width: var(--min-nav-size);
+    background-color: var(--background-secondary);
+    box-shadow: 8px 0px 16px rgba(0,0,0,0.7);
+    padding:5px 0px;
+    border-right: 0.5px solid var(--border-color);
+}
+nav button
+{
+    font-weight: bold;
+    background-color: transparent;
+    background:transparent;
+    text-align: left;
+    box-shadow: none;
+    color:var(--text-color);
+    cursor:pointer;
+    padding:10px;
+    border:none;
+    transition: 0.5s;
+    margin:2px 10px;
+    border-radius: 25px;
+}
+nav button:hover, nav button.active
+{
+    background-color:var(--hover-color);
+}
+nav button.active
+{
+    color:var(--highlight-color);
+}
+
+
+.element
+{
+    border:0.5px solid var(--border-color);
+    margin:5px;
+    padding:10px;
+    box-shadow: 0 8px 6px rgba(0,0,0,0.7);
+    border-radius: 10px;
+}
+
+
+table
+{
+    background-color: var(--background-secondary);
+    width:100%;
+    table-layout: fixed;
+    border: 0.5px solid var(--border-color);
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.7);
+    border-radius: 10px;
+    border-spacing: 0px;
+    overflow: hidden;
+}
+tr
+{
+    width:100%;
+    height:100%;
+    transition: 0.5s background-color;
+}
+tr:nth-child(2n+1)
+{
+    background-color: var(--background-primary);
+}
+tr:hover
+{
+    background-color: var(--hover-color);
+}
+th
+{
+    background-color: var(--background-tertiary);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+td, th
+{
+    text-align: center;
+    padding:10px;
+
+}
+table tr:first-child th
+{
+    border-bottom:0.5px solid var(--border-color);
+}
+
+.container
+{
+    background-color: var(--background-primary);
+    color:var(--text-color);
+    padding:5px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.7);
+    border:0.5px solid var(--border-color);
+}

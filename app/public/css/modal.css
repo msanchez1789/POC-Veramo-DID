@@ -1,0 +1,31 @@
+.modalContainer
+{
+    position:fixed;
+    align-items: center;
+    justify-content: center;
+    top:0px;
+    left:0px;
+    background-color: rgba(0,0,0,0.8);
+    width:100vw;
+    height:100vh;
+    z-index: 100;
+    opacity:1;
+    transition: 0.5s opacity;
+}
+.modalContainer.hidden
+{
+    opacity:0;
+}
+.modal
+{
+    background-color: var(--background-primary);
+    padding:10px;
+    min-width: 25vw;
+    border:0.5px solid var(--border-color);
+    box-shadow: 0 8px 8px rgba(0,0,0,0.8);
+}
+
+.validationButtonContainer
+{
+    justify-content: end;
+}
