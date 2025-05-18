@@ -39,7 +39,7 @@ docker compose up --build
 docker compose down
 ```
 
-## Supprimer database
+## Supprimer DataBase
 ```bash
 rm -f app/database.sqlite
 ```
